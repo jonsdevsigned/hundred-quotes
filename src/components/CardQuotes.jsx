@@ -2,6 +2,7 @@ import phrases from '../utils/phrases.json'
 import elementRandom from '../utils/elementRandom'
 import { useState } from 'react';
 import colors from '../utils/colors.json'
+import jonsdesigned from '../assets/jonsdesigned-web.png'
 
 function CardQuotes() {
 
@@ -23,9 +24,16 @@ function CardQuotes() {
                 <p>{randomPhrases.quote}</p>
                 <small>{randomPhrases.author}</small>
                 <button onClick={handleNext} style={{ backgroundColor: randomColors }}>
-                    <i style={{ color: randomColors }} class="fa-duotone fa-solid fa-angles-right fa-xl"></i>
+                    <i style={{ color: randomColors }} className="fa-duotone fa-solid fa-angles-right fa-xl"></i>
                 </button>
             </div>
+            <footer>
+                <span className="publicity">
+                    <img className="logo_image" src={jonsdesigned} alt="Logo de jonsdevsigned" />
+                    <span className="jons">Jons</span><span className="dev">dev</span><span className="signed">signed</span>
+                </span>
+                <p className="developer" style={{ color: randomColors }}>John Forero - 2024</p>
+            </footer>
         </div >
     )
 }
